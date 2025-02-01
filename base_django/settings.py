@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6bbxffhtl9fre!6hwfacm5(+w5$e5g#0&#$#q74rikt76mqwa0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["base-django-udqo.onrender.com", "http://127.0.0.1:8000/"]
 MESSAGE_LEVEL = messages.WARNING
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
