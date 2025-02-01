@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html lang="FR">
+    <head>
+        <meta charset="utf-8">
+        <title>Acceuil -Mon Blog</title>
+    </head>
+    <body>
+        {% extends "blog/base.html" %}
+        {% block title %}Acceuil Mon blog {% endblock %}
+
+        {% block content %}
+        <div class="container">
+            <h1 class="my-4">Bienvenue sur le blog</h1>
+            <ul class="list-group">
+                {% for article in articles %}
+                <li class="list-group-item">
+                    {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid nb-3" style="max-width=300px">
+                    {% endif %}
+                    <h2>{{ article.title }}<h2>
+                    <p>{{ article.contenue }}</p>
+                    <p><small>Publié le {{ article.date_publication }}</small></p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endblock %}
+    </body>
+</html>
